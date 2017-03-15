@@ -1,9 +1,12 @@
 Data: 15/03/2017
 
 Q1. Quais as diferenças entre os barramentos de dados e de endereços?
-
+	{ Barramento de Dados(Data Bus): Este transmite os dados entre as partes do mircroprocessador.
+	  Barramento de Endereço(Adress Bus):Transmite os endereços dos registradores, e pode possuir m ais bits que o de dados}
 Q2. Quais são as diferenças entre as memórias RAM e ROM?
-
+	{ A memória RAM, perde a seus dados se a memória acabar e é mais rápida do que a ROM;
+	  a memória ROM, não perde os dados em caso de acabar a energia, mas é mais lenta para armazenar do que a RAM, porque ela lê
+	  sequencialmente.}
 Q3. Considere o código abaixo, de 12 linhas:
 
     1.   #include <stdio.h>
@@ -21,16 +24,23 @@ Q3. Considere o código abaixo, de 12 linhas:
 
 Para este código, responda:
 	(a) A variável 'i' é armazenada na memória RAM ou ROM? Por quê?
+	    {RAM, porque a váriavel 'i', muda constantemente de valor e é preciso um certa velocidade para o bom funcionamento do 		     código.}
 	(b) O programa compilado a partir deste código é armazenado na memória RAM ou ROM? Por quê?
-
+	    {ROM, porque provavelmente quem vai utilizar o programa não vai querer escrever o programa de novo sempre que desligar o 
+	    o computador}
 Q4. Quais são as diferenças, vantagens e desvantagens das arquiteturas Harvard e Von Neumann?
 	{Harvard é mais rápida por enviar e receber as intruções de forma 'paralela', ao mesmo tempo que envia uma 
-	 instrução ele recebe outra.
-	 Von Neumann só recebe a instrução seguinte após receber o resultado da anterior.}
+	 instrução ele recebe outra, porém é mais complexa e maior que a Von Neumann.
+	 Von Neumann só recebe a próxima instrução, após receber o resultado da anterior.}
 Q5. Considere a variável inteira 'i', armazenando o valor 0x8051ABCD. Se 'i' é armazenada na memória a partir do endereço 0x0200, como ficam este byte e os seguintes, considerando que a memória é:
 	(a) Little-endian?
-		[0xCD 0XAB 0X51 0x80]
+		[0x200 0x201 0x202 0x203]
+		[ 0xCD  0XAB  0X51  0x80]
 	(b) Big-endian?
-		[0x80 0X51 0XAB 0xCD]
+		[0x200 0x201 0x202 0x203]
+		[0x80   0X51  0XAB  0xCD]
 
-Q6. Sabendo que o processador do MSP430 tem registradores de 16 bits, como ele soma duas variáveis de 32 bits?
+Q6. Sabendo que o processador do MSP430 tem registradores de 16 bits, como ele soma duas variáveis de 32 bits?	
+	{Armazenando cada variável em dois registradores e realizando a soma do valor dos quatro registradores}
+	
+	
